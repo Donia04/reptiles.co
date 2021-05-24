@@ -74,6 +74,10 @@ header {
     border-top: 1px solid greenyellow;
 }
 
+#hero h2 {
+    display: none;
+}
+
 #hero div {
     height: 50%;
     width: 600px;
@@ -102,28 +106,36 @@ h2.title {
     margin: 20px 30px 50px;
 }
 
-#boxes {
-    height: 700px;
-    overflow: scroll;
+#reptiles {
+    margin-top: 75px;
+}
+
+#employees {
+    margin-top: 70px;
+    background-color: darkgrey;
+}
+
+.boxes {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
     align-content: space-around;
 }
 
-.reptile-boxes {
+.inner-boxes {
     width: 400px;
     border-right: 1px solid greenyellow;
     border-left: 1px solid greenyellow;
     text-align: center;
+    margin-top: 20px;
 }
 
-.reptile-boxes h3 {
+.inner-boxes h3 {
     font-size: 1.5rem;
     color: greenyellow;
 }
 
-.reptile-boxes img {
+.inner-boxes img {
     width: 200px;
     margin-bottom: 50px;
 }
@@ -132,4 +144,34 @@ h2.title {
     display: block;
     font-weight: 700;
     color: red;
+}
+
+@media only screen and (max-width: 600px) {
+    #heading {
+        display: none;
+    }
+
+    #header-list {
+        width: 100%;
+    }
+
+    #hero {
+        background-image: none;
+        height: 400px;
+    }
+
+    #hero h2 {
+        display: block;
+        text-align: center;
+        font-size: 30px;
+        margin: 50px 0;
+    }
+
+    #hero div {
+        width: 100%;
+        height: 70%;
+        margin: 0;
+        background-color: greenyellow;
+        opacity: 1;
+    }
 }
